@@ -25,6 +25,8 @@ namespace Global_Shortcut
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        private static int _clicks; // count of primary button presses
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +35,9 @@ namespace Global_Shortcut
 
         private void OnMainShortcutPrimaryButtonClick(object sender, ContentDialogButtonClickEventArgs e)
         {
+            _clicks += 1;
+            PressesTextBlock.Text = "Number of hotkey presses: " + _clicks;
+
             MainShortcut.UpdatePreviewKeys();
             MainShortcut.CloseContentDialog();
         }
