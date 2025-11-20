@@ -10,6 +10,10 @@
     mc:Ignorable="d"
     Title="Global Shortcut">
 
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="12">
         <TextBlock x:Name="PressesTextBlock" Text="Number of hotkey presses: 0"/>
         <dev:Shortcut x:Name="MainShortcut" PrimaryButtonClick="OnMainShortcutPrimaryButtonClick" SecondaryButtonClick="OnMainShortcutSecondaryButtonClick" CloseButtonClick="OnMainShortcutCloseButtonClick"/>
